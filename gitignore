@@ -1,3 +1,10 @@
+# Project files
+*.cbp
+
+# Folders
+bin/
+obj/
+
 # Prerequisites
 *.d
 
