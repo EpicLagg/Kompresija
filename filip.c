@@ -108,5 +108,6 @@ int longestline(FILE *f)
         if((int)strlen(temp) > max)
             max = strlen(temp);
     }
+    rewind(f);
     return max;
 }

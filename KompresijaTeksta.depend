@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1525886074 source:e:\korisnici\3d\grupaa\horvat.filip\kompresijateksta\kompresijateksta.c
+	<stdio.h>
+	<string.h>
+	"filip.h"
+
+1525886069 source:e:\korisnici\3d\grupaa\horvat.filip\kompresijateksta\filip.c
+	"filip.h"
+
+1522263586 e:\korisnici\3d\grupaa\horvat.filip\kompresijateksta\filip.h
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<limits.h>
+	<stdlib.h>
+
