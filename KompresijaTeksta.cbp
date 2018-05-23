@@ -34,6 +34,10 @@
 		<Unit filename="KompresijaTeksta.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="filip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="filip.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
