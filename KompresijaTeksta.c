@@ -67,7 +67,18 @@ int main()
 	}
 	*/
 	//output
+	int test;
 	for(int i = 0; i < broj_rijeci; i++) {
-		fprintf(o, )
+        test = 0;
+        for(int ii = 0; ii < i; ii++) {
+            //printf("\nif %s == %s, print %d", rijeci[i], rijeci[ii], ii);
+            if(strcmp(rijeci[i], rijeci[ii]) == 0) {
+                fprintf(o, "%d ", ii);
+                test++;
+                break;
+            }
+        }
+        if(test == 0)
+            fprintf(o, "%s ", rijeci[i]);
 	}
 }
