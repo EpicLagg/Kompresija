@@ -70,9 +70,9 @@ int main()
 	int test;
 	for(int i = 0; i < broj_rijeci; i++) {
         test = 0;
-        for(int ii = 0; ii < i; ii++) {
+        for(int ii = 0; ii < bk; ii++) {
             //printf("\nif %s == %s, print %d", rijeci[i], rijeci[ii], ii);
-            if(strcmp(rijeci[i], rijeci[ii]) == 0) {
+            if(strcmp(rijeci[i], kodiranerijeci[ii]) == 0) {
                 fprintf(o, "%d ", ii);
                 test++;
                 break;
