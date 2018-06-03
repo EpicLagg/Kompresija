@@ -29,16 +29,9 @@ int main()
                 k = fopen(datotekakod, "w+");
                 o = fopen(datotekaoutput, "w+");
                 fbk = fopen(datotekabk, "w+");
-                puts("test");
-                puts("test");
-                char tekst[104857], temp[1048576];
-                puts("test");
-                while(!feof(f)){
-                    fgets(temp, 1048576, f);
-                    strcat(tekst, temp);
-                }
-                int duljina = (int)strlen(tekst);
-                puts("test");
+                int duljina = longestline(f) + 2;
+                char tekst[duljina];
+                fgets(tekst, duljina, f);
                 int broj_rijeci = 1;
                 //pronalazenje broja rijeci u tekstu
                 for(int i = 0; i < duljina; i++) {
@@ -58,6 +51,10 @@ int main()
                 memcpy(buffer, p, strlen(p));
                 buffer[strlen(p)] = '\0';
                 memmove(rijeci[broj_rijeci - 1], buffer, strlen(p) + 1);
+                //test
+                for(int i = 0; i < broj_rijeci; i++) {
+                    puts(rijeci[i]);
+                }
                 //"kodiranje"
                 char kodiranerijeci[broj_rijeci][32];
                 int bk = 0;
@@ -81,6 +78,7 @@ int main()
                     }
                 }
                 fprintf(fbk, "Broj kodiranih rijeci: %d\n", bk);
+                printf("%d", bk);
                 //output
                 int brojac = 0;
                 for(int i = 0; i < broj_rijeci; i++) {
@@ -120,13 +118,14 @@ int main()
                 o = fopen(datotekaoutput, "r+");
                 fbk = fopen(datotekabk, "r+");
                 int duljina = 0, broj_rijeci = 0, bk = 0;
-                char temp[1048576];
-                fgets(temp, 1048576, fbk);
+                char temp[64];
+                fgets(temp, 64, fbk);
                 sscanf(temp, "Duljina teksta: %d\n", &duljina);
-                fgets(temp, 1048576, fbk);
+                fgets(temp, 64, fbk);
                 sscanf(temp, "Broj rijeci: %d\n", &broj_rijeci);
-                fgets(temp, 1048576, fbk);
+                fgets(temp, 64, fbk);
                 sscanf(temp, "Broj kodiranih rijeci: %d\n", &bk);
+                printf("%d, %d, %d", duljina, broj_rijeci, bk);
                 char tekst[duljina];
                 fgets(tekst, duljina, o);
                 char brojevi[broj_rijeci][32], buffer[32], *p = tekst;
@@ -141,11 +140,11 @@ int main()
                 memcpy(buffer, p, strlen(p));
                 buffer[strlen(p)] = '\0';
                 memmove(brojevi[broj_rijeci - 1], buffer, strlen(p) + 1);
-                tekst[0] = '\0';
-                while(!feof(k)) {
-                    fgets(temp, duljina, k);
-                    strcat(tekst, temp);
+                //test
+                for(int i = 0; i < broj_rijeci; i++) {
+                    puts(brojevi[i]);
                 }
+                fgets(tekst, duljina, k);
                 char rijeci[broj_rijeci][32];
                 p = tekst;
                 for(int i = 0; i < bk - 1; i++) {
@@ -159,6 +158,9 @@ int main()
                 memcpy(buffer, p, strlen(p));
                 buffer[strlen(p)] = '\0';
                 memmove(rijeci[bk - 1], buffer, strlen(p) + 1);
+                for(int i = 0; i < bk; i++) {
+                    puts(rijeci[i]);
+                }
                 int kodnibrojevi[broj_rijeci];
                 for(int i = 0; i < broj_rijeci; i++) {
                     sscanf(brojevi[i], "%d", &kodnibrojevi[i]);
@@ -169,10 +171,6 @@ int main()
                     else
                         fprintf(f, " %s", rijeci[kodnibrojevi[i]]);
                 }
-                fclose(f);
-                fclose(k);
-                fclose(o);
-                fclose(fbk);
                 break;
             }
         default:

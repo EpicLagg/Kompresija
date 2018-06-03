@@ -17,5 +17,6 @@ void strrmv(char *haystack, char *needle);
 char *strfnd(char *haystack, char *needle);
 void fgetline(char *niz, int broj, size_t arraysize, FILE *f);
 int longestline(FILE *f);
+int textlength(FILE *f);
 
 #endif // FILIP_H

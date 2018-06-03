@@ -1,0 +1,3 @@
+Duljina teksta: 404
+Broj rijeci: 64
+Broj kodiranih rijeci: 14

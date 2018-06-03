@@ -14,3 +14,21 @@
 	<limits.h>
 	<stdlib.h>
 
+1528030364 source:c:\users\korisnik\documents\kompresija\kompresijateksta\filip.c
+	"filip.h"
+
+1528030402 c:\users\korisnik\documents\kompresija\kompresijateksta\filip.h
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<limits.h>
+	<stdlib.h>
+
+1528034227 source:c:\users\korisnik\documents\kompresija\kompresijateksta\kompresijateksta.c
+	<stdio.h>
+	<string.h>
+	"filip.h"
+
+1527543757 source:c:\users\korisnik\documents\kompresija\kompresijateksta\newline replacer.c
+	<stdio.h>
+

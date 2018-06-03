@@ -111,3 +111,15 @@ int longestline(FILE *f)
     rewind(f);
     return max;
 }
+
+int textlength(FILE *f)
+{
+    int duljina = 0;
+    char temp[1048576];
+    while(!feof(f)) {
+        fgets(temp, 1048576, f);
+        duljina += (int)strlen(temp);
+    }
+    rewind(f);
+    return duljina;
+}
